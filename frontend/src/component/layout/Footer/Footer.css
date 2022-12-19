@@ -1,0 +1,75 @@
+footer {
+  margin-top: 10vmax;
+  padding: 2vmax;
+  background-color: rgb(34, 33, 33);
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.leftFooter {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.leftFooter h4 {
+  font-family: "Roboto";
+  font-size: 1vmax;
+}
+
+.leftFooter p {
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 1.2vmax;
+}
+
+.leftFooter img {
+  width: 10vmax;
+  margin: 1vmax;
+  cursor: pointer;
+}
+
+.midFooter {
+  width: 60%;
+  text-align: center;
+}
+
+.midFooter h1 {
+  font-size: 4vmax;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  /* color: rgb(4, 123, 213); */
+}
+
+.midFooter p {
+  max-width: 60%;
+  margin: 1vmax auto;
+}
+
+.rightFooter {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rightFooter h4 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.4vmax;
+  text-decoration: underline;
+}
+
+.rightFooter a {
+  text-decoration: none;
+  font-size: 1.3vmax;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: white;
+  margin: 0.5vmax;
+  transition: all 0.5s;
+}
+
+.rightFooter a:hover {
+  color: rgb(4, 123, 213);
+}

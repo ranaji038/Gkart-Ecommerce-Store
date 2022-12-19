@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth !important;
+}
+
+/* For Chrome , Safari , Edge and Opera  */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.greenColor {
+  color: green !important;
+}
+
+.redColor {
+  color: red !important;
+}

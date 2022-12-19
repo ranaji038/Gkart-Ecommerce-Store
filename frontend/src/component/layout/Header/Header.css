@@ -1,0 +1,142 @@
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+.header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #131921;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header_logo {
+  width: 75px;
+  object-fit: contain;
+  margin: 0 24px;
+  margin-top: 3px;
+}
+
+.header_search {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  border-radius: 24px;
+}
+
+.header_searchInput {
+  height: 12px;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  font: 200 1.1vmax cursive;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.search-btn {
+  padding: 5px;
+  width: 3vw;
+  height: 23px;
+  outline: none;
+  background-color: #cd9042;
+}
+.search-btn > svg {
+  position: absolute;
+  height: 22px;
+  transform: translate(-1vmax, -0.8vmax);
+}
+
+.header_nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.header_option {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: white;
+}
+
+.header_optionLineOne {
+  font-size: 10px;
+}
+
+.header_optionLineTwo {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.header_optionCart {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.header_CartCount {
+  margin: 0 10px;
+}
+
+
+@media screen and (max-width: 600px) {
+  .header {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    background-color: #131921;
+    justify-content: space-around;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+ 
+  .header_logo {
+    width: 20vw;
+    object-fit: contain;
+    margin: 0 2vmax;
+    margin-top: 0.5vmax;
+  }
+  
+  .header_search {
+    display: none;
+  }
+  .header_option {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1vmax;
+    margin-right: 1vmax;
+    color: white;
+  }
+
+  .header_nav {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  
+.header_optionLineOne {
+  font-size: 0.8vpx;
+}
+
+.header_optionLineTwo {
+  font-size: 1vmax;
+  font-weight: 500;
+}
+
+.header_optionCart {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.header_CartCount {
+  margin: 0 0.3vmax;
+}
+
+  
+}
