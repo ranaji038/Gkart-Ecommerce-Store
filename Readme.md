@@ -1,7 +1,6 @@
 # Gkart E-COMMERCE 
 
 
-
 # Technology Used
 1.  Node 
 2.  React 

@@ -1,0 +1,17 @@
+{
+    "version": 2,
+    "name": "Gkart-server",
+    "buildCommand": "NPM_CONFIG_PRODUCTION=false && npm install && npm install --prefix frontend && npm run build --prefix frontend",
+    "builds": [
+        {
+            "src": "./Backend/server.js",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/server.js"
+        }
+    ]
+}
