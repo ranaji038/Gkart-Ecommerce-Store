@@ -1,5 +1,6 @@
 import {
   ADD_TO_CART,
+  REMOVE_ALL_CART_ITEM,
   REMOVE_CART_ITEM,
   SAVE_SHIPPING_INFO,
 } from "../constants/CartConstants";
@@ -36,6 +37,8 @@ export const cartReducer = (
         cartItems: state.cartItems.filter((i) => i.product !== action.payload),
         // filter the products and the product with given id will be removed
       };
+
+
 
     case SAVE_SHIPPING_INFO:
       return {

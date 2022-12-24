@@ -17,6 +17,7 @@ import ForgotPassword from "./component/User/ForgotPassword.js";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Cart from "./component/Cart/Cart.js";
+import About from "./component/About/About.js";
 import Shipping from "./component/Cart/Shipping.js";
 import ConfirmOrder from "./component/Cart/ConfirmOrder.js";
 import axios from "axios";
@@ -43,8 +44,8 @@ import { useSelector } from "react-redux";
 
 
 function App() {
-  
-  const {  isAuthenticated  } = useSelector((state) => state.user);
+
+  const { isAuthenticated } = useSelector((state) => state.user);
 
   const [stripeApiKey, setStripeApiKey] = useState("");
 
@@ -75,6 +76,7 @@ function App() {
         <Route path="/login" element={<LoginSignUp />}></Route>
         <Route path="/password/forgot" element={<ForgotPassword />}></Route>
         <Route path="/cart" element={<Cart />}></Route>
+        <Route path="/about" element={<About />}></Route>
 
         <Route element={<ProtectedRoute isAuthenticated={isAuthenticated} />}>
           {stripeApiKey && (
@@ -88,42 +90,42 @@ function App() {
             ></Route>
           )}
         </Route>
-       
 
-      {/* User Protected Routes  */}
-              
+
+        {/* User Protected Routes  */}
+
         <Route element={<ProtectedRoute isAuthenticated={isAuthenticated} />}>
-        <Route path="/account" element={<Profile />}></Route>
-        <Route path="/me/update" element={<UpdateProfile />}></Route>
-        <Route path="/password/update" element={<UpdatePassword />}></Route>
-        <Route path="/shipping" element={<Shipping />}></Route>
-        <Route path="/success" element={<OrderSuccess />}></Route>
-        <Route path="/orders" element={<MyOrders />}></Route>
-        <Route path="/order/confirm" element={<ConfirmOrder />}></Route>
-        <Route path="/order/:id" element={<OrderDetails />}></Route>
-        </Route>
-          
-       {/* Admin Protected Routes  */}
-       <Route element={<ProtectedRoute isAuthenticated={isAuthenticated} adminRoute={true} />}>
-        <Route path="/admin/dashboard"  element={<Dashboard />}></Route>
-
-        <Route path="/admin/products"  element={<ProductList />}></Route>
-
-        <Route path="/admin/product"  element={<NewProduct />}></Route>
-
-        <Route path="/admin/product/:id"  element={<UpdateProduct />}></Route>
-
-        <Route path="/admin/orders"  element={<OrderList />}></Route>
-        <Route path="/admin/order/:id"  element={<ProcessOrder />}></Route>
-        <Route path="/admin/users"  element={<UserList />}></Route>
-        <Route path="/admin/user/:id"  element={<UpdateUser />}></Route>
-        <Route path="/admin/reviews"  element={<ProductReviews />}></Route>
-
-
-          
+          <Route path="/account" element={<Profile />}></Route>
+          <Route path="/me/update" element={<UpdateProfile />}></Route>
+          <Route path="/password/update" element={<UpdatePassword />}></Route>
+          <Route path="/shipping" element={<Shipping />}></Route>
+          <Route path="/success" element={<OrderSuccess />}></Route>
+          <Route path="/orders" element={<MyOrders />}></Route>
+          <Route path="/order/confirm" element={<ConfirmOrder />}></Route>
+          <Route path="/order/:id" element={<OrderDetails />}></Route>
         </Route>
 
-        <Route path="*" element= {
+        {/* Admin Protected Routes  */}
+        <Route element={<ProtectedRoute isAuthenticated={isAuthenticated} adminRoute={true} />}>
+          <Route path="/admin/dashboard" element={<Dashboard />}></Route>
+
+          <Route path="/admin/products" element={<ProductList />}></Route>
+
+          <Route path="/admin/product" element={<NewProduct />}></Route>
+
+          <Route path="/admin/product/:id" element={<UpdateProduct />}></Route>
+
+          <Route path="/admin/orders" element={<OrderList />}></Route>
+          <Route path="/admin/order/:id" element={<ProcessOrder />}></Route>
+          <Route path="/admin/users" element={<UserList />}></Route>
+          <Route path="/admin/user/:id" element={<UpdateUser />}></Route>
+          <Route path="/admin/reviews" element={<ProductReviews />}></Route>
+
+
+
+        </Route>
+
+        <Route path="*" element={
           window.location.pathname === "/process/payment" ? null : <NotFound />
         }    ></Route>
 

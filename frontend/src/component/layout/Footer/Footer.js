@@ -21,9 +21,9 @@ function Footer() {
       </div>
       <div className="rightFooter">
         <h4>Follow Us</h4>
-        <a href="/">Instagram</a>
-        <a href="/">Github</a>
-        <a href="/">Linkedin</a>
+        <a href="/about">About Us</a>
+        <a href="https://github.com/ranaji038">Github</a>
+        <a href="https://www.linkedin.com/in/prashant-ranawat">Linkedin</a>
       </div>
     </footer>
   );

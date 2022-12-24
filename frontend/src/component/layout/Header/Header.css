@@ -3,6 +3,7 @@
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
 }
+
 .header {
   height: 60px;
   display: flex;
@@ -44,7 +45,8 @@
   outline: none;
   background-color: #cd9042;
 }
-.search-btn > svg {
+
+.search-btn>svg {
   position: absolute;
   height: 22px;
   transform: translate(-1vmax, -0.8vmax);
@@ -53,6 +55,8 @@
 .header_nav {
   display: flex;
   justify-content: space-evenly;
+  text-decoration: none;
+
 }
 
 .header_option {
@@ -61,15 +65,18 @@
   margin-left: 10px;
   margin-right: 10px;
   color: white;
+  text-decoration: none;
 }
 
 .header_optionLineOne {
   font-size: 10px;
+  text-decoration: none;
 }
 
 .header_optionLineTwo {
   font-size: 13px;
   font-weight: 800;
+  text-decoration: none;
 }
 
 .header_optionCart {
@@ -82,6 +89,9 @@
   margin: 0 10px;
 }
 
+a {
+  text-decoration: none;
+}
 
 @media screen and (max-width: 600px) {
   .header {
@@ -94,17 +104,18 @@
     top: 0;
     z-index: 100;
   }
- 
+
   .header_logo {
     width: 20vw;
     object-fit: contain;
     margin: 0 2vmax;
     margin-top: 0.5vmax;
   }
-  
+
   .header_search {
     display: none;
   }
+
   .header_option {
     display: flex;
     flex-direction: column;
@@ -118,25 +129,25 @@
     justify-content: flex-end;
   }
 
-  
-.header_optionLineOne {
-  font-size: 0.8vpx;
-}
 
-.header_optionLineTwo {
-  font-size: 1vmax;
-  font-weight: 500;
-}
+  .header_optionLineOne {
+    font-size: 0.8vpx;
+  }
 
-.header_optionCart {
-  display: flex;
-  align-items: center;
-  color: white;
-}
+  .header_optionLineTwo {
+    font-size: 1vmax;
+    font-weight: 500;
+  }
 
-.header_CartCount {
-  margin: 0 0.3vmax;
-}
+  .header_optionCart {
+    display: flex;
+    align-items: center;
+    color: white;
+  }
 
-  
+  .header_CartCount {
+    margin: 0 0.3vmax;
+  }
+
+
 }

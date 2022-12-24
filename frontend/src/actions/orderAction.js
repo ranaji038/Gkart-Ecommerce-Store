@@ -15,12 +15,11 @@ import {
   UPDATE_ORDER_REQUEST,
   UPDATE_ORDER_SUCCESS,
   UPDATE_ORDER_FAIL,
-
   DELETE_ORDER_REQUEST,
   DELETE_ORDER_FAIL,
   DELETE_ORDER_SUCCESS,
- 
-  
+
+
 } from "../constants/orderConstants";
 
 import axios from "axios";
@@ -84,7 +83,7 @@ export const getAllOrders = () => async (dispatch) => {
 
 // Update Order
 
-export const updateOrder = (id ,order) => async (dispatch) => {
+export const updateOrder = (id, order) => async (dispatch) => {
   try {
     dispatch({ type: UPDATE_ORDER_REQUEST });
 
@@ -110,7 +109,7 @@ export const deleteOrder = (id) => async (dispatch) => {
   try {
     dispatch({ type: DELETE_ORDER_REQUEST });
 
-  
+
     const { data } = await axios.delete(`/api/v1/admin/order/${id}`);
 
     dispatch({ type: DELETE_ORDER_SUCCESS, payload: data.success });
