@@ -1,7 +1,7 @@
 import React from "react";
 import "./aboutSection.css";
 import { Button, Typography, Avatar } from "@mui/material";
-import LinkedinIcon from "@mui/icons-material/Linkedin";
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from "@mui/icons-material/GitHub";
 
 const About = () => {
@@ -40,7 +40,7 @@ const About = () => {
                             href="https://www.linkedin.com/in/prashant-ranawat"
                             target="blank"
                         >
-                            <LinkedinIcon className="LinkedinSvgIcon" />
+                            <LinkedInIcon className="LinkedinSvgIcon" />
                         </a>
 
                         <a href="https://github.com/ranaji038" target="blank">
