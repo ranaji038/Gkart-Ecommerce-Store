@@ -2,7 +2,7 @@ import React from "react";
 import "./aboutSection.css";
 import { Button, Typography, Avatar } from "@mui/material";
 import LinkedinIcon from "@mui/icons-material/Linkedin";
-import GithubIcon from "@mui/icons-material/Github";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 const About = () => {
     const visitLinkedin = () => {
@@ -44,7 +44,7 @@ const About = () => {
                         </a>
 
                         <a href="https://github.com/ranaji038" target="blank">
-                            <GithubIcon className="githubSvgIcon" />
+                            <GitHubIcon className="githubSvgIcon" />
                         </a>
                     </div>
                 </div>

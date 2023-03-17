@@ -7,10 +7,10 @@ const fileUpload = require("express-fileupload");
 const cors = require("cors");
 const path = require("path")
 
-app.use(express.json({ limit: '50mb' }));
+app.use(express.json({ limit: '30mb', extended: true }));
 app.use(cookieParser());
-app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
-app.use(fileUpload({ limit: '50mb' }));
+app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }));
+app.use(fileUpload({ limit: '30mb', extended: true }));
 app.use(cors());
 
 
