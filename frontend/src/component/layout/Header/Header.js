@@ -4,7 +4,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import "./Header.css";
 import { useSelector } from "react-redux";
-import  logo  from "../../../logo.png"
+import logo from "../../../logo.png"
 
 const Header = () => {
   const navigate = useNavigate();
@@ -13,7 +13,7 @@ const Header = () => {
   const { cartItems } = useSelector((state) => state.cart);
 
   const searchSubmitHandler = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     if (keyword.trim()) {
       navigate(`/products/${keyword}`);
     } else {
@@ -27,7 +27,7 @@ const Header = () => {
         <img
           src={logo}
           className="header_logo"
-          alt="logo-amazon"
+          alt="logo-Gkart"
         />
       </Link>
 
@@ -36,6 +36,10 @@ const Header = () => {
           className="header_searchInput"
           type="text"
           onChange={(e) => setKeyword(e.target.value)}
+          onKeyPress={(e) => {
+            e.key === "Enter" && searchSubmitHandler()
+
+          }}
         />
         <button className="search-btn" onClick={searchSubmitHandler}>
           <SearchIcon />

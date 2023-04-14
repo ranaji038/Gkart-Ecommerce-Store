@@ -19,7 +19,7 @@ const About = () => {
                     <div>
                         <Avatar
                             style={{ width: "10vmax", height: "10vmax", margin: "2vmax 0" }}
-                            src="https://media.licdn.com/dms/image/D4D03AQEPjqEl-KlvXw/profile-displayphoto-shrink_400_400/0/1670931212635?e=1684972800&v=beta&t=2bve0qZY2jjMy46DeifA9E6DuRU10EFaqhago88qbWo"
+                            src="https://drive.google.com/file/d/1lJyRIkvaa6njrBgpY_IiMiXu8z-k-oZ9/view?usp=share_link"
                             alt="Founder"
                         />
                         <Typography>Prashant Singh Ranawat</Typography>
